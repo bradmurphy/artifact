@@ -1,0 +1,114 @@
+.clearfix:before,
+.clearfix:after {
+  content: " "; 
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+#hack {
+	height: 2000px;
+}
+
+
+#contact-section {
+	background: url(../img/bg_contact.jpg) no-repeat fixed;
+	background-size: cover;
+	//background: #000;
+	background-position: 50% 50%;
+	height: 100%;
+	min-height: auto;
+	@include pad(20px 0);
+	.contact-image {
+		margin: 0 auto;
+	}
+	@include mq(laptop) {
+		min-height: 1200px;
+	}
+}
+
+.diamond {
+	background: rgba($black, .7);
+	position: relative;
+	margin-top: 40px;
+	@include mq(tablet) {
+		left: 50%;
+		background: transparent;
+		width: 768px;
+		margin-left: -359px;
+		padding: 10px 0; 
+		@include box-sizing(border-box);
+	}
+	@include mq(laptop) {
+		left: 50%;
+		background-size: contain;
+		width: 820px;
+		margin-left: -410px;
+		padding-top: 135px;
+		@include box-sizing(border-box);
+	}
+}
+
+.city {
+	float: left;
+	width: 100%;
+	padding: 10px 0;
+	@include mq(android) {
+		padding: 10px 40px;
+	}
+	@include mq(tablet) {
+		&.la-circ {
+			float: left;
+			padding-top: 75px;
+			width: 350px;
+			height: 350px;
+			background: rgba($white, .75);
+			@include box-sizing(border-box);
+		}
+		&.atl-circ {
+			float: right;
+			padding-top: 75px;
+			width: 350px;
+			height: 350px;
+			background: rgba($black, .75);
+			@include box-sizing(border-box);
+		}
+		border-radius: 50%;
+	}
+	@include box-sizing(border-box);
+	.contact {
+		float: left;
+		width: 100%;
+		font-family: $codeProLC;
+		font-size: 1em;
+		color: $white;
+	}
+	a {
+		@include transition(all .3s ease-in-out);
+		&:hover {
+			color: $red;
+		}
+	}
+	.atl {
+		text-align: right;
+		@include mq(tablet) {
+			text-align: center;
+		}
+	}
+	.la {
+		text-align: left;
+		@include mq(tablet) {
+			color: $black;
+			text-align: center;
+		}
+	} 
+}
+
+
+

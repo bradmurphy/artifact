@@ -1,0 +1,79 @@
+#about-section {
+	background: url(../img/about_tile.jpg) no-repeat;
+	min-height: auto;
+	background-size: cover;
+	@include pad(20px 0);
+	.about-image {
+		margin: 0 auto;
+	}
+	@include mq(laptop) {
+		min-height: 947px;
+	}
+}
+
+.hexagon {
+	margin-top: 40px;
+	width: auto;
+	height: 360px;
+	@include mq(tablet) {
+		margin-top: 140px;
+		height: 480px;
+	}
+	@include mq(laptop) {
+		height: 260px;
+	}
+	.shape1 {
+		float: left;
+		width: 0;
+		@include mq(tablet) {
+			border-right: 80px solid rgba($black, .9);
+			border-top: 240px solid transparent;
+			border-bottom: 240px solid transparent;
+		}
+		@include mq(laptop) {
+			border-right: 80px solid rgba($black, .9);
+			border-top: 130px solid transparent;
+			border-bottom: 130px solid transparent;
+		}
+	}
+	.shape2 {
+		float: left;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, .9);
+		display: table;
+		padding: 0 10px;
+		@include box-sizing(border-box);
+		@include mq(tablet) {
+			width: calc(100% - 160px);
+			padding: 0 0;
+		}
+		p {
+			text-align: center;
+			font-family: $codeProLight;
+			font-size: 1em;
+			text-transform: uppercase;
+			color: $cream;
+			display: table-cell;
+			vertical-align: middle;
+			font-weight: 700;
+			@include mq(tablet) {
+				font-size: 1.425em;
+			}
+		}
+	}
+	.shape3 {
+		float: left;
+		width: 0;
+		@include mq(tablet) {
+			border-left: 80px solid rgba($black, .9);
+			border-top: 240px solid transparent;
+			border-bottom: 240px solid transparent;
+		}
+		@include mq(laptop) {
+			border-left: 80px solid rgba($black, .9);
+			border-top: 130px solid transparent;
+			border-bottom: 130px solid transparent;
+		}
+	}
+}

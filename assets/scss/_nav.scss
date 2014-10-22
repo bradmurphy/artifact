@@ -1,0 +1,182 @@
+// MAIN NAV
+nav {
+	&.stuck {
+		top: 0;
+		position: fixed;
+	}
+	float: left;
+	background: $black;
+	width: 100%;
+	@include box-sizing(border-box);
+	height: 60px;
+	@include pad(15px 0);
+	z-index: 9999;
+	position: fixed;
+	@include mq(android) {
+		@include pad(12px 0);
+	}
+	.content-wrap {
+		display: table;
+		.nav-logo {
+			height: 30px;
+			@include mq(android) {
+				height: 36px;
+			}
+		}
+	}
+	@include mq(tablet) {
+		position: static;
+	}
+}
+
+.sticky-wrapper {
+	float: left;
+	width: 100%;
+}
+
+// HAMBURGER BUTTON AND ANIMATION
+#nav-icon {
+	float: right;
+	width: 35px;
+	height: 35px;
+	@include transform(rotate(0deg));
+	@include transition(all .25s ease-in-out);
+	cursor: pointer;
+	@include mq(android) {
+		margin-top: 4px;
+	}
+	@include mq(tablet) {
+		display: none;
+	}
+	&.open {
+		div {
+			&:nth-child(1) {
+				top: 13px;
+				width: 0%;
+				opacity: 0;
+				left: 50%;
+			}
+			&:nth-child(2) {
+				@include transform(rotate(45deg));
+			}
+			&:nth-child(3) {
+				@include transform(rotate(-45deg));
+			}
+			&:nth-child(4) {
+				top: 13px;
+				width: 0%;
+				opacity: 0;
+				left: 50%;
+			}
+		}
+	}
+	div {
+		display: block;
+		position: absolute;
+		height: 5px;
+		width: 100%;
+		background: $red;
+		opacity: 1;
+		left: 0;
+		@include transform(rotate(0deg));
+		@include transition(all .25s ease-in-out);
+		&:nth-child(1) {
+			top: 0px;
+		}
+		&:nth-child(2), &:nth-child(3) {
+			top: 13px;
+		}
+		&:nth-child(4) {
+			top: 26px;
+		}
+	}
+	@include mq(tablet) {
+		display: none;
+	}
+}
+
+// LINKS MOBILE
+.link-list-mobile {
+	position: absolute;
+	top: 60px;
+	left: -100%;
+	@include span-columns(12);
+	background: lighten($black, 10%);
+	@include pad(0 0);
+	@include margin(0 0);
+	z-index: 999999;
+	@include mq(tablet) {
+		display: none;
+	}
+	li {
+		a {
+			color: $white;
+			font-family: $codePro;
+			letter-spacing: 2px;
+			font-size: 1.25em;
+			@include pad(10px 20px);
+			text-transform: uppercase;
+			display: block;
+			cursor: pointer;
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				background: $black;
+				color: darken($red, 15%);
+			}
+			&.nav-active {
+				color: $red;
+			}
+		}
+	}
+}
+
+// LINKS DESKTOP/TABLET
+.link-list {
+	display: none;
+	@include mq(tablet) {
+		display: block;
+		float: right;
+		list-style: none;
+		@include pad(4px 0);
+		@include box-sizing(border-box);
+		li {
+			display: inline;
+			a {
+				color: $white;
+				font-family: $codePro;
+				letter-spacing: 2px;
+				font-size: 0.813em;
+				text-transform: uppercase;
+				cursor: pointer;
+				@include pad(0px 10px);
+				@include transition(all .3s ease-in-out);
+				@include mq(laptop) {
+					@include pad(0px 16px);
+				}
+				&:hover {
+					color: $red;
+				}
+				&.nav-active {
+					color: $red;
+				}
+			}
+		}
+	}
+}
+
+// SOCIAL
+.social {
+	display: none;
+	@include mq(tablet) {
+		display: block;
+		float: right;
+		width: 19px;
+		height: 19px;
+		cursor: pointer;
+		@include transition(all .3s ease-in-out);
+		@include margin(8px 12px 0);
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

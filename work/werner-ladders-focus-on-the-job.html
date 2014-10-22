@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Artifact Design - Werner Ladders - Focus on the Job</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Artifact Design, Inc.">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="../assets/css/styles.min.css">
+          <!-- Demo CSS -->
+
+         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <nav>
+            
+            <div class="content-wrap">
+                <a href="../index.php"><img src="../assets/img/logo-nav.png" alt="Artifact" class="nav-logo"/></a>
+
+                <div id="nav-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <a href="https://www.facebook.com/pages/Artifact-Design-Inc/231876353490358?fref=ts" target="_blank"><img src="../assets/img/icon-fb.png" class="social" /></a>
+                <a href="https://twitter.com/TeamArtifact" target="_blank"><img src="../assets/img/icon-twitter.png" class="social" /></a>
+
+                <ul class="link-list-mobile">
+                    <li><a href="/index.php#features-section">home</a></li>
+                    <li><a href="../index.php#reel-section">reel</a></li>
+                    <li><a href="../index.php#work-section">work</a></li>
+                    <li><a href="../index.php#about-section">about</a></li>
+                    <li><a href="../index.php#contact-section">contact</a></li>
+                </ul>
+
+                <ul class="link-list">
+                    <li><a href="../index.php#features-section">home</a></li>
+                    <li><a href="../index.php#reel-section">reel</a></li>
+                    <li><a href="../index.php#work-section">work</a></li>
+                    <li><a href="../index.php#about-section">about</a></li>
+                    <li><a href="../index.php#contact-section">contact</a></li>
+                </ul>
+                
+            </div>
+
+        </nav>
+<div class="spacer"></div>
+    
+       <section class="work-section-multivideo dark">
+        <div class="flexslider">
+          <ul class="slides">
+
+            <li>
+              <iframe class="vimeo-multivideo" id="player_1" src="http://player.vimeo.com/video/86911667?api=1&amp;player_id=player_1" width="500" height="281"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </li>
+                <li>
+                 <iframe class="vimeo-multivideo" id="player_2" src="http://player.vimeo.com/video/86911667?api=1&amp;player_id=player_2" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                </li>
+          </ul>
+        </div>
+     
+            <div class="lines-multivideo">
+            </div>
+
+            <div class="work-wrap">
+                
+                
+
+                <h3>werner ladders</h1>
+                <h4>"focus on the job"</h4>
+
+                <div class="spacer"></div>
+
+                <p class="work-text">As the Official Ladder of the NCAA Basketball Tournament, you'll see the winning team standing on a Werner Ladder as they cut the net to celebrate their victory. You'll also see our latest spots for Werner through the fine folks at Brunner Advertising airing throughout the March Madness tournament. With a focus on authenticity, we shot the workplace-themed spots on a real construction-site in Los Angeles, then after some "invisible ladder" VFX work, melded the footage with our 3D animations to tell a powerful story of how Werner Ladders enable you to focus on the job at hand. Special shout out to our audio partners at Soundbyte for their brilliant and meticulous sound design for the campaign. An amazing collaboration using our full scope of services - from location scouting to 3D modeling to color grading - we wanted to make sure we lived up to the exceptional standards of the Werner brand every step of the way, and we think we climbed to the occasion.</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              
+              
+
+
+            </div>
+
+
+        </section>     
+        
+
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+
+  <!-- FlexSlider -->
+  <script defer src="jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+
+      // Vimeo API nonsense
+      var player = document.getElementById('player_1');
+      $f(player).addEvent('ready', ready);
+
+      function addEvent(element, eventName, callback) {
+        (element.addEventListener) ? element.addEventListener(eventName, callback, false) : element.attachEvent(eventName, callback, false);
+      }
+
+      function ready(player_id) {
+        var froogaloop = $f(player_id);
+
+        froogaloop.addEvent('play', function(data) {
+          $('.flexslider').flexslider("pause");
+        });
+
+        froogaloop.addEvent('pause', function(data) {
+          $('.flexslider').flexslider("play");
+        });
+      }
+
+
+      // Call fitVid before FlexSlider initializes, so the proper initial height can be retrieved.
+      $(".flexslider")
+        .fitVids()
+        .flexslider({
+          animation: "slide",
+          useCSS: false,
+          animationLoop: true,
+          smoothHeight: true,
+          start: function(slider){
+            $('body').removeClass('loading');
+          },
+          before: function(slider){
+            $f(player).api('pause');
+          }
+      });
+    });
+  </script>
+
+
+   <!-- Syntax Highlighter -->
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushXml.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+
+  <!-- Optional FlexSlider Additions -->
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="js/jquery.fitvid.js"></script>
+
+
+
+        <script src="../assets/js/vendor/TweenMax.min.js"></script>
+        <script src="../assets/js/interfere/work.js"></script>
+
+
+        <!-- LIVERELOADING FOR GRUNT -->
+        <script src="//localhost:35729/livereload.js"></script>
+        <!-- REMOVE FOR PRODUCTION -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script> -->
+    </body>
+</html>

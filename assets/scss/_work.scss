@@ -1,0 +1,177 @@
+#work-section {
+	background: transparent;
+	@include pad(20px 0 40px 0);
+	.work-image {
+		margin: 0 auto;
+	}
+}
+
+#grid .mix {
+	display: none;
+}
+
+// GRID
+.container {
+	width: 100%;
+	height: 100%;
+  //min-height: 5820px;
+  //min-height: auto;
+  //min-height: 5820px;
+  min-height: 3500px;
+  margin-left: auto;
+	margin-right: auto;
+	@include row();
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 760px;
+    //min-height: 1900px;
+	}
+	@include mq(grid3) {
+		max-width: 1140px;
+	}
+}
+
+// SORTING LIST
+.sorting {
+  width: 100%;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(iphone) {
+    max-width: 320px;
+  }
+  @include mq(android) {
+    max-width: 480px;
+  }
+  @include mq(tablet) {
+    max-width: 760px;
+  }
+  @include mq(grid) {
+    max-width: 1140px;
+  }
+  ul {
+    @include span-columns(12);
+    list-style: none;
+    @include mq(tablet) {
+    	position: relative;
+    	left: 50%;
+    	margin-left: -209px;
+    	width: 502px;
+    }
+    li {
+    	@include span-columns(12);
+      display: inline;
+      font-family: $codePro;
+      font-size: 1em;
+      text-align: center;
+      @include mq(tablet) {
+      	font-size: 0.75em;
+		width: auto;
+		margin: 20px 0 20px 0;
+		&:nth-child(1) {
+			border-right: 1px solid $black;
+		}
+		&:nth-child(2) {
+			border-right: 1px solid $black;
+		}
+		&:nth-child(3) {
+			border-right: 1px solid $black;
+		}
+		&:nth-child(4) {
+			border-right: 1px solid $black;
+		}
+      }
+      a {
+      	@include span-columns(12);
+      	@include transition(all .3s ease-in-out);
+      	background: transparent;
+      	display: block;
+      	color: $black;
+      	@include pad(10px 0);
+      	@include mq(tablet) {
+			@include pad(0 10px 3px 10px);
+      	}
+      	&:hover {
+      		color: $white;;
+      		background: $black;
+      	}
+        &.sort-active {
+          color: $white;
+          background: $black;
+        }
+      }
+    }
+  }
+}
+
+  a {
+    @include transition(all .3s ease-in-out);
+    color: $white;
+    &:hover {
+      color: $red;
+    }
+  }
+
+// GRID ITEM
+.grid-item {
+  float: left;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  width: 100%;
+  height: 380px;
+  border: 1px solid white;
+  cursor: pointer;
+  @include box-sizing(border-box);
+  @include mq(grid2) {
+    width: 380px;
+  }
+}
+
+// GRID OVERLAY
+.grid-hover {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.87);
+  @include pad(0 8px);
+  @include transition(all .3s ease-in-out);
+  @include box-sizing(border-box);
+  &:hover {
+    opacity: 1;
+  }
+  span {
+    float: left;
+    width: 100%;
+    text-transform: uppercase;
+    color: $cream;
+    margin: 10px 0;
+  }
+  .client {
+  	font-family: $codeProLight;
+    font-size: 2.75em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    font-weight: 700;
+    @include mq(tablet) {
+      font-size: 3.2em;
+    }
+  }
+  .project {
+    font-family: $codeProLight;
+    font-size: 1.6em;
+    line-height: 1em;
+    letter-spacing: 2px;
+    border-top: 1px solid $cream;
+    overflow: hidden;
+    font-weight: 700;
+    padding-bottom: 3px;
+  }
+}

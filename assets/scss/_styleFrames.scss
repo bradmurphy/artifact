@@ -1,0 +1,281 @@
+.dark {
+	background: url(../img/work-dark.jpg) repeat;
+}
+
+.light {
+	background: $white;
+	.work-wrap {
+		h3, h4, p {
+			color: $black;
+		}
+	}
+	.lines {
+		background: url(../img/light-lines.png) repeat center center;
+	}
+	#style-header span {
+		background: $white;
+		color: $black;
+	}
+	.vimeo {
+		background: url(../img/work-light.jpg) repeat;
+	}
+}
+
+.work-section {
+	width: 100%;
+	height: auto;
+	padding-top: 120px;
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		padding-top: 120px;
+	}
+}
+
+.work-section-multivideo {
+	width: 100%;
+	height: auto;
+	padding-top: 120px;
+	@include box-sizing(border-box);
+	@include mq(tablet) {
+		padding-top: 49px;
+	}
+}
+
+.lines {
+	float: left;
+	background: url(../img/dark-lines.png) repeat center center;
+	width: 100%;
+	height: 167px;
+	overflow: hidden;
+	@include mq(android) {
+		height: 270px;
+	}
+	@include mq(tablet) {
+		height: 432px;
+	}
+	@include mq(laptop) {
+		height: 540px;
+	}
+}
+
+.lines-multivideo {
+	float: left;
+	background: url(../img/dark-lines.png) repeat center center;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	@include mq(iphone) {
+		height: 0;
+	}	
+	@include mq(android) {
+		height: 0;
+	}
+	@include mq(tablet) {
+		height: 0;
+	}
+	@include mq(laptop) {
+		height: 540px;
+		margin-top: -542px;
+	}
+}
+
+.vimeo {
+	background: url(../img/work-dark.jpg) repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 167px;
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+	@include mq(android) {
+		width: 480px;
+		height: 270px;
+		padding: 0 15px;
+		@include box-sizing(border-box);
+	}
+	@include mq(tablet) {
+		width: 768px;
+		height: 432px;
+	}
+	@include mq(laptop) {
+		width: 960px;
+		height: 540px;
+	}
+}
+
+.vimeo-multivideo {
+	background: url(../img/work-dark.jpg) repeat;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 167px;
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+	@include mq(android) {
+		width: 480px;
+		height: 270px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
+		@include box-sizing(border-box);
+	}
+	@include mq(tablet) {
+		width: 768px;
+		height: 432px;
+	}
+	@include mq(laptop) {
+		width: 960px;
+		height: 540px;
+
+	}
+}
+.work-wrap {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	@include row();
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 960px;
+	}
+}
+
+.spacer {
+	float: left;
+	width: 100%;
+	height: 0px;
+	padding: 30px 0;
+	@include box-sizing(border-box);
+}
+
+#style-header {
+	height: 31px;
+	background-position: 0 -33px;
+	margin: 20px 0 30px 0;
+	text-align: center;
+	font-weight: 700;
+	span {
+		font-family: $codeProLight;
+		font-size: 2.4em;
+		color: $white;
+		background: url(../img/work-dark.jpg);
+		line-height: 0.5em;
+		padding: 0 10px;
+	}
+}
+
+.work-480x275 {
+	float: left;
+	width: 100%;
+	height: 183px;
+	border: 3px solid transparent;
+	overflow: hidden;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		width: 100%;
+		height: 275px;
+	}
+	@include mq(tablet) {
+		width: 50%;
+		height: 220px;
+	}
+	@include mq(laptop) {
+		width: 50%;
+		height: 275px;
+	}
+	span {
+		font-family: $codeProLight;
+		font-size: 1.5em;
+		color: $white;
+		line-height: 0.5em;
+		padding: 0 10px;
+	}
+}
+
+.work-480x550 {
+	float: left;
+	width: 100%;
+	height: 550px;
+	border: 3px solid transparent;
+	overflow: hidden;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		width: 100%;
+		height: 550px;
+	}
+	@include mq(tablet) {
+		width: 50%;
+		height: 550px;
+	}
+	@include mq(laptop) {
+		width: 50%;
+		height: 550px;
+	}
+	span {
+		font-family: $codeProLight;
+		font-size: 1.5em;
+		color: $white;
+		line-height: 0.5em;
+		padding: 0 10px;
+	}
+}
+
+.work-960x275 {
+	float: left;
+	width: 100%;
+	height: 92px;
+	border: 3px solid transparent;
+	overflow: hidden;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		width: 100%;
+		height: 138px;
+	}
+	@include mq(tablet) {
+		width: 100%;
+		height: 220px;
+	}
+	@include mq(laptop) {
+		width: 100%;
+		height: 128px;
+	}
+}
+
+.work-960x500 {
+	float: left;
+	width: 100%;
+	height: 167px;
+	border: 3px solid transparent;
+	overflow: hidden;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		width: 100%;
+		height: 250px;
+	}
+	@include mq(tablet) {
+		width: 100%;
+		height: 400px;
+	}
+	@include mq(laptop) {
+		width: 100%;
+		height: 500px;
+	}
+}
+
+.grid_319.columns                  {width: 312px; margin-right: 3px; display: inline-block;}
+.grid .grid_319.columns img              {width: 100%;}
+

@@ -1,0 +1,18 @@
+//REEL
+#reel-section {
+	background: url(../img/bg_work_2.jpg);
+	background-position: 50% 0;
+	background-size: cover;
+	max-height: 1034px;
+	min-height: auto;	
+	@include pad(20px 0);
+	@include mq(laptop) {
+		min-height: 1000px;
+	}
+	.vimeo {
+		margin-top: 40px;
+		overflow: hidden; 
+	}
+}
+
+// VIMEO CLASS ON WORK STYLE FRAMES CSS

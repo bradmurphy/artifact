@@ -1,0 +1,42 @@
+#splash-section {
+	display: none;
+	@include mq(tablet) {
+		display: block;
+	}
+	height: 100%;
+	min-height: 1000px;
+	.content-wrap {
+		position: relative;
+		background: url(../img/artifact_logo_lines.png) no-repeat;
+		background-position: 50% 0;
+		background-size: contain;
+		height: 100%;
+		min-height: auto;
+		max-width: 1138px;
+		// DOWN BUTTON
+		div {
+			position: relative;
+			left: 50%;
+			margin-left: -24px;
+			width: 49px;
+			height: 49px;
+			border-radius: 50%;
+			background: url(../img/btn_down_black.png) no-repeat;
+			background-size: cover;
+			cursor: pointer;
+			@include transition(all .3s ease-in-out);
+			&:hover {
+				opacity: .7;
+			}
+			@include mq(tablet) {
+				top: 45%;
+			}
+			@include mq(laptop) {
+				top: 50%;
+			}
+			@include mq(desktop) {
+				top: 51%;
+			}
+		}
+	}
+}

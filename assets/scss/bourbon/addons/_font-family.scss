@@ -1,0 +1,52 @@
+$georgia: Georgia, Cambria, "Times New Roman", Times, serif;
+$helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+$monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+$verdana: Verdana, Geneva, sans-serif;
+
+@import url("//hello.myfonts.net/count/2bd219");
+
+@font-face {
+    font-family: 'Code Pro';
+    src: url('../fonts/2BD219_9_0.eot');
+    src: url('../fonts/2BD219_9_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2BD219_9_0.woff') format('woff'),
+    url('../fonts/2BD219_9_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Code Pro LC';
+    src: url('../fonts/2BD219_6_0.eot');
+    src: url('../fonts/2BD219_6_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2BD219_6_0.woff') format('woff'),
+    url('../fonts/2BD219_6_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Code Pro Light';
+    src: url('../fonts/2BD219_7_0.eot');
+    src: url('../fonts/2BD219_7_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2BD219_7_0.woff') format('woff'),
+    url('../fonts/2BD219_7_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Code Pro Light LC';
+    src: url('../fonts/2BD219_4_0.eot');
+    src: url('../fonts/2BD219_4_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2BD219_4_0.woff') format('woff'),
+    url('../fonts/2BD219_4_0.ttf') format('truetype');}
+  
+@font-face {
+    font-family: 'Code Pro Bold';
+    src: url('../fonts/2BD219_8_0.eot');
+    src: url('../fonts/2BD219_8_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2BD219_8_0.woff') format('woff'),
+    url('../fonts/2BD219_8_0.ttf') format('truetype');
+}
+
+$codePro: "Code Pro", sans-serif;
+$codeProLC: "Code Pro LC", sans-serif;
+$codeProLight: "Code Pro Light", sans-serif;
+$codeProLightLC: "Code Pro Light LC", sans-serif;
+$codeProBold: "Code Pro Bold", sans-serif;

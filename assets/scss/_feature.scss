@@ -1,0 +1,109 @@
+#features-section {
+	max-height: 1257px;
+}
+
+// FEATURE CLASS
+.feature {
+	width: 100%;
+	height: 419px;
+	cursor: pointer;
+}
+
+// BACKGROUNDS
+#feature1 {
+	background: url(../img/GA_Lottery_TopGoat_Main.jpg) no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+	background-attachment: fixed;
+	@include mq(iphone) {
+		background-attachment: scroll;
+	}
+	@include mq(android) {
+		background-attachment: scroll;
+    }	
+	@include mq(tablet) {
+		background-attachment: scroll;
+	}
+	@include mq(desktop) {
+		background-attachment: fixed;
+	}
+}
+
+#feature2 {
+	background: url(../img/CDC_HIV_Main.jpg) no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+	background-attachment: fixed;
+	@include mq(iphone) {
+		background-attachment: scroll;
+	}	
+	@include mq(android) {
+		background-attachment: scroll;
+    }
+	@include mq(tablet) {
+		background-attachment: scroll;
+	}
+	@include mq(desktop) {
+		background-attachment: fixed;
+	}
+
+}
+
+#feature3 {
+	background: url(../img/AICPstill6.jpg) no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+	background-attachment: fixed;
+	@include mq(iphone) {
+		background-attachment: scroll;
+	}
+	@include mq(android) {
+	background-attachment: scroll;
+    }
+	@include mq(tablet) {
+		background-attachment: scroll;
+	}
+	@include mq(desktop) {
+	background-attachment: fixed;
+	}
+}
+
+// HOVER
+
+.feature-hover { 
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba($black, 0.5);
+	@include transition(all .3s ease-in-out);
+	display: table;
+	&:hover {
+		opacity: 1;
+	}
+	.content-wrap {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+#feature4 {
+	background: url(../img/bg_work_4.jpg) no-repeat;
+	height: 360px;
+	background-size: cover;
+	background-position: 50% 0;
+	@include mq(iphone) {
+		background-attachment: scroll;
+	}
+	@include mq(android) {
+	background-attachment: scroll;
+    }
+	@include mq(tablet) {
+	background-attachment: scroll;
+	}
+	@include mq(desktop) {
+	background-attachment: fixed;
+	}
+
+}
+
+
